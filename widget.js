@@ -4628,7 +4628,7 @@ $.extend(CodeRunner, {
 			$(".overlay").addClass('show');
 		
 		$.ajax({
-			url: 'https://thingproxy.freeboard.io/fetch/https://dotnetfiddle.net/Home/Run',
+			url: 'https://cors.bridged.cc/https://dotnetfiddle.net/Home/Run',
 			data: JSON.stringify(item.formData),
 			type: 'POST',
 			dataType: 'json',
@@ -4914,7 +4914,7 @@ $.extend(Linter, {
 	    Linter._lastObj = syntaxData;
        
 	    $.ajax({
-			url: "https://thingproxy.freeboard.io/fetch/https://dotnetfiddle.net/Home/GetSyntaxErrors",
+			url: "https://cors.bridged.cc/https://dotnetfiddle.net/Home/GetSyntaxErrors",
 			method: "POST",
 			async: true,
 			dataType: 'json',
@@ -5156,7 +5156,7 @@ $.extend(Linter, {
 			autoCompleteData.Position = cursorPositionInCode;
 			autoCompleteData.CodeBlock = $("<div/>").text(docCode).html();
 			//console.log('()', cm);
-			$.ajax("https://thingproxy.freeboard.io/fetch/https://dotnetfiddle.net/Home/GetAutoComplete", {
+			$.ajax("https://cors.bridged.cc/https://dotnetfiddle.net/Home/GetAutoComplete", {
 				method: "POST",
 				async: true,
 				dataType: 'json',
@@ -5213,7 +5213,7 @@ $.extend(Linter, {
 		tokenData.Position = cursorPositionInCode;
 		tokenData.CodeBlock = $("<div/>").text(docCode).html();
 
-		$.ajax("https://thingproxy.freeboard.io/fetch/https://dotnetfiddle.net/Home/GetTokenType", {
+		$.ajax("https://cors.bridged.cc/https://dotnetfiddle.net/Home/GetTokenType", {
 			method: "POST",
 			async: true,
 			dataType: 'json',
