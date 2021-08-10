@@ -45,63 +45,35 @@
     <div>
         <!-- Console -->
         <input type="hidden" id="OriginalConsole-0" value="using System;
-    using System.Linq;
-    
-    namespace TestConsoleApp
-    {
-        class Program
+
+        public class Program
         {
-            static void Main(string[] args)
+            public static void Main()
             {
-                var Employees = new[] { new { ID = 1, Name = &quot;John&quot;, DepartmentID = 2 }, 
-                                        new { ID = 2, Name = &quot;Mark&quot;, DepartmentID = 4 } };
-    
-                var Departments = new[] { new { ID = 1, Name = &quot;Finance&quot; },
-                                          new { ID = 2, Name = &quot;Marketing&quot; },
-                                          new { ID = 3, Name = &quot;Production&quot; },
-                                          new { ID = 4, Name = &quot;Sales&quot; } };
-                
-                var EmployeesWithDeptName = ; //Write your LINQ HERE
-    
-                foreach (var EmployeeWithDeptName in EmployeesWithDeptName)
-                {
-                  Console.WriteLine($&quot;Emp ID: {EmployeeWithDeptName.ID}, Name: {EmployeeWithDeptName.Name}, Department: {EmployeeWithDeptName.DepartmemtName}&quot;);
-                }
-                
+                Console.WriteLine(Average(2, 1));
+            }
+        
+            public static double Average(int a, int b)
+            {
+                return a + b / 2;  //Change Here Alone
             }
         }
-    }
-    
     " />
         <!-- Script -->
         <input type="hidden" id="OriginalScript-0" value="using System;
-    using System.Linq;
-    
-    namespace TestConsoleApp
-    {
-        class Program
+
+        public class Program
         {
-            static void Main(string[] args)
+            public static void Main()
             {
-                var Employees = new[] { new { ID = 1, Name = &quot;John&quot;, DepartmentID = 2 }, 
-                                        new { ID = 2, Name = &quot;Mark&quot;, DepartmentID = 4 } };
-    
-                var Departments = new[] { new { ID = 1, Name = &quot;Finance&quot; },
-                                          new { ID = 2, Name = &quot;Marketing&quot; },
-                                          new { ID = 3, Name = &quot;Production&quot; },
-                                          new { ID = 4, Name = &quot;Sales&quot; } };
-                
-                var EmployeesWithDeptName = ; //Write your LINQ HERE
-    
-                foreach (var EmployeeWithDeptName in EmployeesWithDeptName)
-                {
-                  Console.WriteLine($&quot;Emp ID: {EmployeeWithDeptName.ID}, Name: {EmployeeWithDeptName.Name}, Department: {EmployeeWithDeptName.DepartmemtName}&quot;);
-                }
-                
+                Console.WriteLine(Average(2, 1));
+            }
+        
+            public static double Average(int a, int b)
+            {
+                return a + b / 2;  //Change Here Alone
             }
         }
-    }
-    
     " />
 
         <!-- Console -->
@@ -396,8 +368,7 @@
     <!-- <iframe width="100%" style="height: 80%;"
         src="https://dotnetfiddle.net/Widget?Languages=CSharp&CSharp_FiddleId=OBES96" frameborder="0"></iframe> -->
     <div><b>Expected output:</b><br />
-        Emp ID: 1, Name: John, Department: Marketing<br />
-        Emp ID: 2, Name: Mark, Department: Sales
+        1.5
     </div>
     <script>
         TogetherJSConfig_hubBase = "https://togetherjs-hub.glitch.me/";
