@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Coding Test</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <iframe width="100%" style="height: 80%;"
+        src="https://dotnetfiddle.net/Widget?Languages=CSharp&CSharp_FiddleId=OBES96" frameborder="0"></iframe>
+    <div><b>Expected output:</b><br />
+        Emp ID: 1, Name: John, Department: Marketing<br />
+        Emp ID: 2, Name: Mark, Department: Sales
+    </div>
+    <script>
+        var TogetherJSConfig_toolName = "Sharing"
+        var TogetherJSConfig_suppressJoinConfirmation = true;
+    </script>
+    <script src="https://togetherjs.com/togetherjs-min.js"></script>
+    <br />
+    <br />
+    <button id="ShareButton" class="hide" onclick="ShareScreen(this); return false;">Sharing</button>
+    <script>
+        function ShareScreen(thisval) {
+            var urlParams = new URLSearchParams(window.location.search);
+            var sharing = urlParams.get('sharing');
+            if (sharing) {
+                TogetherJS(thisval);
+            }
+        }
+
+        (function () {
+            var urlParams = new URLSearchParams(window.location.search);
+            var sharing = urlParams.get('sharing');
+            var element = document.getElementById("ShareButton");
+            if (sharing) {
+                element.classList.remove("hide");
+            }
+        })();
+    </script>
+</body>
+
+</html>
