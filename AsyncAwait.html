@@ -19,8 +19,16 @@
             display: none;
         }
 
-        #main {
+        /* #main {
             position: unset !important;
+        } */
+
+        .opwin {
+            line-height: 1;
+            font-size: 1em;
+            font-family: monospace;
+            white-space: nowrap;
+            padding: 5px 8px;
         }
     </style>
     <!-- JSFIDDLE -->
@@ -140,6 +148,7 @@ public class Program
                     <button type="button" value="Run" class="btn btn-default" onclick="fiddle.run();">
                         <span class="glyphicon glyphicon-play"></span>&nbsp;Run
                     </button>
+                    <button id="ShareButton" class="hide btn btn-default" onclick="TogetherJS(this); return false;">Sharing</button>
                 </div>
                 <div class="col-xs-7 col-md-7">
                     <ul id="tabs" class="nav nav-tabs widget-lang-tabs">
@@ -177,7 +186,12 @@ public class Program
         <div class="col-xs-12 col-sm-12 col-md-6 col-output">
             <div class="textarea-output">
                 <div id="resultCache" style="display: none;">Cached Result</div>
+                <b>Current output:</b><br />
                 <div id="output" class="output" style="height: auto;"></div>
+                <b>Expected output:</b><br />
+                <div class="opwin">
+                    Weather in Chennai is 40 ℃. Sunny.
+                </div>
                 <div id="input" contenteditable="true"></div>
             </div>
             <div id="stats-loader" style="display: none;">
@@ -409,9 +423,6 @@ public class Program
     </div>
     <!-- <iframe width="100%" style="height: 80%;"
         src="https://dotnetfiddle.net/Widget?Languages=CSharp&CSharp_FiddleId=OBES96" frameborder="0"></iframe> -->
-    <div><b>Expected output:</b><br />
-        Weather in Chennai is 40 ℃. Sunny.
-    </div>
     <script>
         TogetherJSConfig_hubBase = "https://togetherjs-hub.glitch.me/";
         var TogetherJSConfig_toolName = "Sharing"
@@ -420,7 +431,6 @@ public class Program
     <script src="https://togetherjs.com/togetherjs-min.js"></script>
     <br />
     <br />
-    <button id="ShareButton" class="hide" onclick="TogetherJS(this); return false;">Sharing</button>
     <script>
         (function () {
             var urlParams = new URLSearchParams(window.location.search);
