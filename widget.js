@@ -4572,8 +4572,8 @@ $.extend(CodeRunner, {
 	currentSponsorFirstRun : false,
 	showResults: function (resp) {
 		if ($("#ProjectType").val() == 'Mvc' || $("#ProjectType").val() == 'Nancy') {
-			$('#mvc-output-iframe').attr('src', '/MvcPage/' + (resp.HasErrors?"":resp.WebPageHtmlOutputId));
-			$('#mvc-output-iframe').next('.section-label').attr('href', '/MvcPage/' + (resp.HasErrors ? "" : resp.WebPageHtmlOutputId));
+			$('#mvc-output-iframe').attr('src', 'https://dotnetfiddle.net/MvcPage/' + (resp.HasErrors?"":resp.WebPageHtmlOutputId));
+			$('#mvc-output-iframe').next('.section-label').attr('href', 'https://dotnetfiddle.net/MvcPage/' + (resp.HasErrors ? "" : resp.WebPageHtmlOutputId));
 		}
 
 		if (resp.ConsoleOutput) {
